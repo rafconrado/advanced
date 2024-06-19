@@ -1,11 +1,15 @@
-import React from 'react'
+import { Children, createContext } from "react";
 
-const HookUseContext = () => {
+export const SomeContext = createContext();
+
+export const HookUseContext = ({ children }) => {
+  const contextValue = "texting context";
+
   return (
-    <div>
-      
-    </div>
-  )
-}
+    <SomeContext.Provider value={{ contextValue }}>
+      {children}
+    </SomeContext.Provider>
+  );
+};
 
-export default HookUseContext
+export default HookUseContext;
