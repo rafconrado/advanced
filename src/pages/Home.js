@@ -4,11 +4,13 @@ import HookUseReducer from "../components/HookUseReducer";
 import HooksUseEffect from "../components/HooksUseEffect";
 import HookUseContext from "../components/HookUseContext";
 import HookUseRef from "../components/HookUseRef";
+import HookUseMemo from "../components/HookUseMemo";
+import HookUseLayoutEffect from "../components/HookUseLayoutEffect";
 
 //useContext
 import { useContext } from "react";
 import { SomeContext } from "../components/HookUseContext";
-import HookUseMemo from "../components/HookUseMemo";
+import HookCustom from "../components/HookCustom";
 
 const Home = () => {
   const { contextValue } = useContext(SomeContext);
@@ -24,6 +26,8 @@ const Home = () => {
       <hr />
       <HookUseRef />
       <HookUseMemo />
+      <HookUseLayoutEffect />
+      <HookCustom />
     </div>
   );
 };
